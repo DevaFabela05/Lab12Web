@@ -12,7 +12,7 @@ Dengan mengaktifkan xampp terlebih dahulu untuk menyalakan aphace dan mysql, mem
 #### Menambahkan function pada file index.php
 
 untuk membuat query pada pencarian data. Inilah tampilannya:
-![gambar2](screenshot/ss3.png)
+![gambar2](screenshot/ss2.png)
 
 #### Membuat form pencarian
 Sisipkan kode tersebut pada file index.php (daftar barang), sebelum table data dan sesudah tombol tambah data. Inilah tampilannya:
@@ -20,5 +20,5 @@ Sisipkan kode tersebut pada file index.php (daftar barang), sebelum table data d
 
 #### Hasil Pratikum 12
 
-Inilah tampilany:
+Inilah tampilanya:
 ![gambar4](screenshot/hsl.png
