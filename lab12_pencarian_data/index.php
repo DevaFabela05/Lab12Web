@@ -1,10 +1,19 @@
-<?php require('header.php'); ?>
 <?php
-include("koneksi.php");
+$q="";
+if(isset($_GET['submit']) && !empty($_GET['q'])) {
+    $q = $_GET['q'];
+    $sql_where =" WHERE nama LIKE '{$q}%";
+}
+
+$title = 'Data Barang';
+include_once ("koneksi.php");
 
 // query untuk menampilkan data
 $sql = 'SELECT * FROM data_barang';
 $result = mysqli_query($conn, $sql);
+include_once ('header.php');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,17 +26,18 @@ $result = mysqli_query($conn, $sql);
 
 <body>
     <div class="container">
-
-        <h2>Data Barang</h2>
-        <nav>
-<a href="home.php">Home</a>
-<a href="about.php">Tentang</a>
-<a href="kontak.php">Kontak</a>
-</nav>
-
-        <a href="tambah.php">Tambah Barang</a>
+        <?php
+        echo '<a href="tambah.php" class=btn btn-large"><h2>Tambah Barang</h2></a>';
+        ?>
         <br></br>
-        
+        <form action="" method="get">
+            <label for="q">Cari data: </label>
+            <input type="text" id="q" name="q" class="input-q" value="<?php echo $q ?>" size="30" autofocus 
+            placeholder="masukan keyword pencarian.." autocomplete="off">
+            <input type="submit" name="submit" value="Cari" class="btn btn-primary">
+          
+        </form>
+        <br> 
 
         <div class="main">
             <table border="1" cellpadding="10" cellspacing="0">
