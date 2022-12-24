@@ -21,4 +21,4 @@ Sisipkan kode tersebut pada file index.php (daftar barang), sebelum table data d
 #### Hasil Pratikum 12
 
 Inilah tampilanya:
-![gambar4](screenshot/hsl.png
+![gambar4](screenshot/hsl.png)
